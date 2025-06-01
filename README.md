@@ -64,6 +64,26 @@ Your API will be available at:
 
 ---
 
+### 5. Instructions for Configuring Password Reset Email Settings
+To send password reset links successfully, please provide the email account credentials from which the reset emails will be sent.
+This requires entering a valid email address and its password in the settings below:
+
+Email: Enter the full email address (e.g., yourname@gmail.com) that will be used as the sender of the reset password emails.
+
+Password: Enter the password for the email account above. This is required to authenticate with the SMTP server and send emails on your behalf.
+
+Make sure:
+
+The email account supports SMTP with SSL/TLS on port 587 (e.g., Gmail).
+
+You have enabled "Less secure app access" or generated an app-specific password if using Gmail with 2-step verification.
+
+The credentials are correct to avoid email sending failures.
+
+
+
+
+
 ## 📦 Example API Usage
 
 ### Register a New User
