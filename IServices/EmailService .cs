@@ -18,13 +18,13 @@ namespace CommonAPIs.ImpService
             var smtpClient = new SmtpClient("smtp.gmail.com")
             {
                 Port = 587,
-                Credentials = new NetworkCredential("jkomal1906@gmail.com", "rvcg eauo prcm xwew"),
+                Credentials = new NetworkCredential("", ""),
                 EnableSsl = true,
             };
 
             var mailMessage = new MailMessage
             {
-                From = new MailAddress("jkomal1906@gmail.com"),
+                From = new MailAddress(""),
                 Subject = subject,
                 Body = body + "<br/><br/><i>Note: This is a dummy link for testing purposes only.</i>",
                 IsBodyHtml = true,
