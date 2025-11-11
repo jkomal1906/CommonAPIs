@@ -1,5 +1,7 @@
 using CommonAPIs.ImpRepository;
 using CommonAPIs.ImpService;
+using CommonAPIs.IRepository;
+using CommonAPIs.IServices;
 using CommonAPIs.Models;
 using CommonAPIs.Repository;
 using CommonAPIs.Services;
@@ -15,7 +17,7 @@ var builder = WebApplication.CreateBuilder(args);
 var configuration = builder.Configuration;
 
 // 2. Register DbContext
-builder.Services.AddDbContext<CommomAPIsDbContext>(options =>
+builder.Services.AddDbContext<CommonAPIsDbContext>(options =>
     options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
 
 // 3. Register Services
@@ -24,6 +26,9 @@ builder.Services.AddScoped<IEmailService, EmailService>();
 builder.Services.AddScoped<IOtpService, OtpService>(); // If you have an OTP service
 
 builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<IProductRepository, ProductRepository>();
+builder.Services.AddScoped<IProductService, ProductService>();
+
 
 
 // 4. Password Hasher

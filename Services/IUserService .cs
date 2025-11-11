@@ -16,8 +16,5 @@ namespace CommonAPIs.Services
 
         //Reset Password
         Task<bool> ResetPasswordAsync(ResetPasswordRequestDto request);
-
-
-
     }
 }

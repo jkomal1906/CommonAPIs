@@ -20,10 +20,10 @@ namespace CommonAPIs.ImpService
         private readonly IUserRepository _userRepository;
         private readonly IConfiguration _configuration;
         private readonly IEmailService _emailService;
-        private readonly CommomAPIsDbContext _commonAPIsDbContext; // Added missing field declaration  
+        private readonly CommonAPIsDbContext _commonAPIsDbContext; // Added missing field declaration  
         private readonly IPasswordHasher<User> _passwordHasher;
 
-        public UserService(IUserRepository userRepository, IConfiguration configuration, IEmailService emailService, CommomAPIsDbContext commonAPIsDbContext, IPasswordHasher<User> passwordHasher)
+        public UserService(IUserRepository userRepository, IConfiguration configuration, IEmailService emailService, CommonAPIsDbContext commonAPIsDbContext, IPasswordHasher<User> passwordHasher)
         {
             _userRepository = userRepository;
             _configuration = configuration;

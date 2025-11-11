@@ -6,8 +6,8 @@ namespace CommonAPIs.ImpRepository
 {
     public class UserRepository : IUserRepository
     {
-        private readonly CommomAPIsDbContext _context;
-        public UserRepository(CommomAPIsDbContext context)
+        private readonly CommonAPIsDbContext _context;
+        public UserRepository(CommonAPIsDbContext context)
         {
             _context = context;
         }
